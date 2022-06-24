@@ -27,8 +27,6 @@ function light() {
 	document.getElementById('weather').setAttribute('data-highcolor', '#ff1c8d');
 	document.getElementById('weather').setAttribute('data-lowcolor', '#42fefc');
 	document.getElementById('weather').removeAttribute('data-cloudfill');
-	document.getElementById('weather').setAttribute('data-mooncolor', '#f3f3f3');
-	document.getElementById('weather').setAttribute('data-snowcolor', '#f3f3f3');
 	script(document, 'script', 'weatherwidget-io-js');
 }
 function dark() {
@@ -40,8 +38,6 @@ function dark() {
 	document.getElementById('weather').setAttribute('data-highcolor', '#ff1c8d');
 	document.getElementById('weather').setAttribute('data-lowcolor', '#42fefc');
 	document.getElementById('weather').setAttribute('data-cloudfill', '#191919');
-	document.getElementById('weather').setAttribute('data-mooncolor', '#f3f3f3');
-	document.getElementById('weather').setAttribute('data-snowcolor', '#f3f3f3');
 	script(document, 'script', 'weatherwidget-io-js');
 }
 let currentTheme = localStorage.getItem('data-theme');
