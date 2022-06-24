@@ -13,7 +13,7 @@ function date() {
     if (hrs < 12)
             greet = 'Morning, ya wierdo!  ';
         else if (hrs >= 12 && hrs <= 17)
-            greet = 'Let's get to work! ';
+            greet = 'Afternoon, time to work! ';
         else if (hrs >= 17 && hrs <= 24)
             greet = 'Working late, huh?  ';
     // console.log(today.toLocaleTimeString());
