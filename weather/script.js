@@ -13,16 +13,16 @@ window.addEventListener(touchEvent, mode);
 function mode() {
 	const currentTheme = document.getElementById('weather').getAttribute('data-theme');
 	console.log(currentTheme);
-	if (currentTheme == 'gray') {
+	if (currentTheme == 'light') {
 		light();
 	} else {
 		dark();
 	}
 }
 function light() {
-	localStorage.setItem('data-theme', 'pure');
-	document.documentElement.setAttribute('data-theme', 'pure');
-	document.getElementById('weather').setAttribute('data-theme', 'pure');
+	localStorage.setItem('data-theme', 'light');
+	document.documentElement.setAttribute('data-theme', 'light');
+	document.getElementById('weather').setAttribute('data-theme', 'light');
 	document.getElementById('weather').removeAttribute('data-basecolor');
 	document.getElementById('weather').setAttribute('data-textcolor', '#37352f');
 	document.getElementById('weather').removeAttribute('data-cloudfill', '#f3f3f3');
@@ -30,9 +30,9 @@ function light() {
 	script(document, 'script', 'weatherwidget-io-js');
 }
 function dark() {
-	localStorage.setItem('data-theme', 'gray');
-	document.documentElement.setAttribute('data-theme', 'gray');
-	document.getElementById('weather').setAttribute('data-theme', 'gray');
+	localStorage.setItem('data-theme', 'dark');
+	document.documentElement.setAttribute('data-theme', 'dark');
+	document.getElementById('weather').setAttribute('data-theme', 'dark');
 	document.getElementById('weather').setAttribute('data-basecolor', '#191919');
 	document.getElementById('weather').removeAttribute('data-textcolor');
 	document.getElementById('weather').setAttribute('data-cloudfill', '#f3f3f3');
