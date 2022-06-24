@@ -49,14 +49,9 @@ h1 {
     display: inline-block;
 }
 
-.card:hover {
-    margin-top: 2px;
-    box-shadow: none;
-}
-
 .clock {
     display: inline;
-    font-family: 'Work Sans', cursive;
+    font-family: 'Work Sans', sans-serif;
     font-size: 2em;
    
 }
@@ -74,7 +69,7 @@ h1 {
 .date {
     display: inline;
     min-width: 162px;
-    font-family: 'Work Sans', cursive;
+    font-family: 'Work Sans', sans-serif;
     font-size: 2em;
     padding-right: 30px;
 }
