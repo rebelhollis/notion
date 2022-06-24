@@ -9,19 +9,13 @@ function date() {
     var hour = zeros(today.getHours());
     var minutes = zeros(today.getMinutes());
     var seconds = zeros(today.getSeconds());
-    if(today.getHours() >=12){
-        seconds+=" pm"
-    }
-    else{
-        seconds+=" am"
-    }
     hrs = today.getHours();
     if (hrs < 12)
-            greet = 'Good Morning  ';
+            greet = 'Morning, ya wierdo!  ';
         else if (hrs >= 12 && hrs <= 17)
-            greet = 'Good Afternoon ';
+            greet = 'Let's get to work! ';
         else if (hrs >= 17 && hrs <= 24)
-            greet = 'Good Evening  ';
+            greet = 'Working late, huh?  ';
     // console.log(today.toLocaleTimeString());
     document.getElementById('greet').innerHTML = greet;
     document.getElementById('hour').innerHTML = hour;
