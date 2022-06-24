@@ -1,4 +1,4 @@
-function script(d, s, id) {
+!function script(d, s, id) {
 	var js,
 		fjs = d.getElementsByTagName(s)[0];
 	js = d.createElement(s);
@@ -6,7 +6,6 @@ function script(d, s, id) {
 	js.src = 'https://weatherwidget.io/js/widget.min.js';
 	fjs.parentNode.insertBefore(js, fjs);
 }
-
 /* FOR JS LOCAL STORAGE SETTINGS
 let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
 window.addEventListener(touchEvent, mode);
