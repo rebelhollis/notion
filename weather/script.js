@@ -50,10 +50,17 @@ if (currentTheme == 'pure') {
 function light() {
 	document.documentElement.setAttribute('data-theme', 'pure');
 	document.getElementById('weather').setAttribute('data-theme', 'pure');
-	document.getElementById('weather').removeAttribute('data-basecolor');
-	document.getElementById('weather').setAttribute('data-textcolor', '#37352f');
+	document.getElementById('weather').setAttribute('data-basecolor', '#FF1C8D');
+	document.getElementById('weather').setAttribute('data-textcolor', '#f3f3f3');
 	document.getElementById('weather').removeAttribute('data-cloudfill');
-	document.getElementById('weather').setAttribute('data-suncolor', '#F58f70');
+	document.getElementById('weather').setAttribute('data-suncolor', '#ffae00');
+	document.getElementById('weather').setAttribute('data-highcoolor', '#ebec00');
+	document.getElementById('weather').setAttribute('data-lowcolor', '#42fefc');
+	document.getElementById('weather').setAttribute('data-cloudcolor', '#f3f3f3');
+	document.getElementById('weather').setAttribute('data-raincolor', '#42fefc');
+	document.getElementById('weather').setAttribute('data-snowcolor', '#f3f3f3');
+	document.getElementById('weather').setAttribute('data-accent', 'rgba(0, 0, 0, 0.1)');
+	document.getElementById('weather').setAttribute('data-shadow', 'rgba(255, 28, 141, 0.35)');
 	script(document, 'script', 'weatherwidget-io-js');
 }
 
@@ -63,7 +70,14 @@ function dark() {
 	document.getElementById('weather').setAttribute('data-basecolor', '#191919');
 	document.getElementById('weather').removeAttribute('data-textcolor');
 	document.getElementById('weather').setAttribute('data-cloudfill', '#191919');
-	document.getElementById('weather').setAttribute('data-suncolor', '#F58f70');
+	document.getElementById('weather').setAttribute('data-suncolor', '#ffae00');
+	document.getElementById('weather').setAttribute('data-highcoolor', '#ebec00');
+	document.getElementById('weather').setAttribute('data-lowcolor', '#42fefc');
+	document.getElementById('weather').setAttribute('data-cloudcolor', '#f3f3f3');
+	document.getElementById('weather').setAttribute('data-raincolor', '#42fefc');
+	document.getElementById('weather').setAttribute('data-snowcolor', '#f3f3f3');
+	document.getElementById('weather').setAttribute('data-accent', 'rgba(0, 0, 0, 0.1)');
+	document.getElementById('weather').setAttribute('data-shadow', 'rgba(255, 28, 141, 0.35)');
 	script(document, 'script', 'weatherwidget-io-js');
 }
 
