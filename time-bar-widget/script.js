@@ -11,11 +11,11 @@ function date() {
     var seconds = zeros(today.getSeconds());
     hrs = today.getHours();
     if (hrs < 12)
-            greet = 'Morning, ya wierdo!  ';
+            greet = 'Morning, ya wierdo!	';
         else if (hrs >= 12 && hrs <= 17)
-            greet = 'Afternoon, time to work! ';
+            greet = 'Afternoon, time to work!	';
         else if (hrs >= 17 && hrs <= 24)
-            greet = 'Working late, huh?  ';
+            greet = 'Working late, huh?		';
     // console.log(today.toLocaleTimeString());
     document.getElementById('greet').innerHTML = greet;
     document.getElementById('hour').innerHTML = hour;
