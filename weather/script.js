@@ -27,6 +27,8 @@ function light() {
 	document.getElementById('weather').setAttribute('data-highcolor', '#ff1c8d');
 	document.getElementById('weather').setAttribute('data-lowcolor', '#42fefc');
 	document.getElementById('weather').removeAttribute('data-cloudfill');
+	document.getElementById('weather').setAttribute('data-mooncolor', '#f3f3f3');
+	document.getElementById('weather').setAttribute('data-snowcolor', '#f3f3f3');
 	script(document, 'script', 'weatherwidget-io-js');
 }
 function dark() {
@@ -35,9 +37,11 @@ function dark() {
 	document.getElementById('weather').setAttribute('data-theme', 'gray');
 	document.getElementById('weather').setAttribute('data-basecolor', '#191919');
 	document.getElementById('weather').removeAttribute('data-textcolor');
-	document.getElementById('weather').setAttribute('data-textcolor', '#ff1c8d');
-	document.getElementById('weather').setAttribute('data-textcolor', '#42fefc');
+	document.getElementById('weather').setAttribute('data-highcolor', '#ff1c8d');
+	document.getElementById('weather').setAttribute('data-lowcolor', '#42fefc');
 	document.getElementById('weather').setAttribute('data-cloudfill', '#191919');
+	document.getElementById('weather').setAttribute('data-mooncolor', '#f3f3f3');
+	document.getElementById('weather').setAttribute('data-snowcolor', '#f3f3f3');
 	script(document, 'script', 'weatherwidget-io-js');
 }
 let currentTheme = localStorage.getItem('data-theme');
@@ -55,8 +59,8 @@ function light() {
 	document.getElementById('weather').setAttribute('data-theme', 'pure');
 	document.getElementById('weather').removeAttribute('data-basecolor');
 	document.getElementById('weather').setAttribute('data-textcolor', '#191919');
-	document.getElementById('weather').setAttribute('data-textcolor', '#191919');
 	document.getElementById('weather').setAttribute('data-highcolor', '#ff1c8d');
+	document.getElementById('weather').setAttribute('data-lowcolor', '#42fefc');
 	document.getElementById('weather').removeAttribute('data-cloudfill');
 	document.getElementById('weather').setAttribute('data-suncolor', '#FFAE00');
 	document.getElementById('weather').setAttribute('data-mooncolor', '#f3f3f3');
@@ -70,6 +74,7 @@ function dark() {
 	document.getElementById('weather').setAttribute('data-basecolor', '#ffffff');
 	document.getElementById('weather').setAttribute('data-textcolor', '#191919');
 	document.getElementById('weather').setAttribute('data-highcolor', '#ff1c8d');
+	document.getElementById('weather').setAttribute('data-lowcolor', '#42fefc');
 	document.getElementById('weather').setAttribute('data-cloudfill', '#191919');
 	document.getElementById('weather').setAttribute('data-suncolor', '#FFAE00');
 	document.getElementById('weather').setAttribute('data-mooncolor', '#f3f3f3');
