@@ -1,15 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Work+Sans&display=swap');
 
-:root {
+[time-date-theme="light"] {
 	--main-bg-color: #fff;
-	--main-text-color: #d9d9d9;
-	--main-time-color: #f58f70;
+	--main-text-color: #191919;
 }
 
 [time-data-theme="dark"] {
 	--main-bg-color: #191919;
-	--main-text-color: #333;
-	--main-time-color: #f58f70;
+	--main-text-color: #fff;
 }
 
 * {
@@ -19,6 +17,8 @@
 
 body{
     line-height: 1.6;
+	background: var(--main-bg-color);
+	color: var(--main-text-color);
 }
 
 h1 {
