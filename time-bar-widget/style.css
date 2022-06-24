@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Work+Sans&display=swap');
+
+body {
+    background-color: #fff;
+    line-height: 1.6;
+
+}
+
+h1 {
+    margin-top: 0;
+}
+
+
+/*CSS START*/
+
+.full-table {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.table-cell {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.card {
+    padding: 10px 25px 10px 25px;
+    border-radius: 10px;
+    background: #ff1c8d;
+    width: 85vw;
+    color: #fff;
+    display: inline-block;
+}
+
+.card:hover {
+    margin-top: 2px;
+    box-shadow: none;
+}
+
+.clock {
+    display: inline;
+    font-family: 'Work Sans', cursive;
+    font-size: 2em;
+   
+}
+
+.time {
+    display: inline;
+    min-width: 37px;
+}
+
+.colon {
+    font-size: 1.1em;
+    display: inline-block;
+}
+
+.date {
+    display: inline;
+    min-width: 162px;
+    font-family: 'Work Sans', cursive;
+    font-size: 2em;
+    padding-right: 30px;
+}
+.greet{
+    
+    display:inline;
+    font-family: 'Permanent Markder', cursive;
+    font-size: 2rem;
+     padding-right: 30px;
+}
