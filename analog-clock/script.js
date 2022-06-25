@@ -15,3 +15,24 @@ setInterval(() => {
    sc.style.transform = `rotateZ(${ss}deg)`;
 })
     
+function light(){
+	document.documentElement.setAttribute('data-theme', 'pure');
+}
+    
+function dark(){
+	document.documentElement.setAttribute('data-theme', 'gray');
+}
+
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+	dark();
+} else {
+	light();
+}
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
+	if (event.matches) {
+		dark();
+	} else {
+		light();
+	}
+});
