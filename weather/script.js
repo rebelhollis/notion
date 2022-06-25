@@ -60,7 +60,7 @@ function light() {
 	document.getElementById('weather').setAttribute('data-raincolor', '#42fefc');
 	document.getElementById('weather').setAttribute('data-snowcolor', '#cbfbfa');
 	document.getElementById('weather').setAttribute('data-accent', 'rgba(0, 0, 0, 0.1)');
-	document.getElementById('weather').setAttribute('data-shadow', 'rgba(255, 28, 141, 0.35)');
+	document.getElementById('weather').setAttribute('data-shadow', 'rgba(255, 174, 0, 0.35)');
 	script(document, 'script', 'weatherwidget-io-js');
 }
 
@@ -77,7 +77,7 @@ function dark() {
 	document.getElementById('weather').setAttribute('data-raincolor', '#42fefc');
 	document.getElementById('weather').setAttribute('data-snowcolor', '#cbfbfa');
 	document.getElementById('weather').setAttribute('data-accent', 'rgba(255, 255, 255, 0.1)');
-	document.getElementById('weather').setAttribute('data-shadow', 'rgba(255, 28, 141, 0.35)');
+	document.getElementById('weather').setAttribute('data-shadow', 'rgba(255, 174, 0, 0.35)');
 	script(document, 'script', 'weatherwidget-io-js');
 }
 
