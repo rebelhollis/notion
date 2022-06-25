@@ -13,9 +13,9 @@ body{
 }
 
 .analog-clock{
-    width: 500px;
+    width: 350px;
     min-width: 350px;
-    height: 500px;
+    height: 350px;
     min-height: 350px;
     display: flex;
     justify-content: center;
