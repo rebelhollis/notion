@@ -71,7 +71,7 @@ function dark() {
 	document.getElementById('weather').removeAttribute('data-textcolor');
 	document.getElementById('weather').setAttribute('data-cloudfill', '#191919');
 	document.getElementById('weather').setAttribute('data-suncolor', '#ffae00');
-	document.getElementById('weather').setAttribute('data-highcoolor', '#ebec00');
+	document.getElementById('weather').setAttribute('data-highcoolor', '#600ef9');
 	document.getElementById('weather').setAttribute('data-lowcolor', '#42fefc');
 	document.getElementById('weather').setAttribute('data-cloudcolor', '#f3f3f3');
 	document.getElementById('weather').setAttribute('data-raincolor', '#42fefc');
