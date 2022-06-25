@@ -28,7 +28,7 @@ body{
     width: 400px;
     min-width: 150px;
     height: auto;
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     background-size: cover;
