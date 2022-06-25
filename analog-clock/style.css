@@ -31,6 +31,7 @@ body{
     justify-content: center;
     align-items: center;
     background-size: cover;
+    object-fit: cover;
     border: var(--main-border);
     border-radius: 50%;
     box-shadow: 0 -15px 15px rgba(255,255,255,0.05),
