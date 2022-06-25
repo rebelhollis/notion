@@ -20,7 +20,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("analog-clock/analog-clock-background.png");
+    background: url("https://github.com/rebelhollis/notion/blob/5c8aee9f5c086527c8b6e7ca43fd59dec43ebd00/analog-clock/analog-clock-background.png");
     background-size: cover;
     border: 5px solid #191919;
     border-radius: 50%;
