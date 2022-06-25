@@ -17,6 +17,7 @@ body{
     height: 350px;
     display: flex;
     justify-content: center;
+    align-items: center;
     background: url("https://dev-to-uploads.s3.amazonaws.com/uploads/articles/245bbqo72lenq5flx0r8.png");
     background-size: cover;
     border: 5px solid #ebf5fa;
