@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap");
+
+:root {
+    --main-bg-color: #fff;
+    --main-text-color: #191919;
+    --main-button-color: rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="gray"] {
+    --main-bg-color: #191919;
+    --main-text-color: #fff;
+    --main-button-color: rgba(255, 255, 255, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--main-bg-color);
+  padding: 0 1rem 1rem 1rem;
+}
+
+.pomodoro-timer {
+  max-width: 500px;
+  margin: 100px auto 0 auto;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: var(--main-text-color);
+  text-align: center;
+}
+
+.session-type {
+  font-size: 1.8rem;
+  font-weight: 400;
+  padding-bottom: 1.25rem;
+}
+
+.timer-display {
+  font-size: 3rem;
+}
+
+.button-group {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  font-size: 1.25rem;
+  margin-top: 0.8rem;
+}
+
+.button {
+  background: var(--main-button-color);
+  color: var(--main-text-color);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+}
+
+.button i {
+  margin-top: 0.7rem;
+}
+
+li.stop {
+  margin-left: 0.5rem;
+}
+
+/* Media Queries */
+@media (max-width: 40rem) {
+  .timer-display {
+    font-size: 2rem;
+  }
+}
