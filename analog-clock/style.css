@@ -1,9 +1,11 @@
 :root {
     --main-bg-color: #fff;
+    --main-border: 5px solid #fff;
 }
 
 [data-theme="gray"] {
     --main-bg-color: #191919;
+    --main-border: 5px solid #191919;
 }
 
 * {
@@ -19,7 +21,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: -var(main-bg-color);
+    background: var(--main-bg-color);
 }
 
 .analog-clock{
@@ -30,9 +32,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("https://dev-to-uploads.s3.amazonaws.com/uploads/articles/245bbqo72lenq5flx0r8.png");
     background-size: cover;
-    border: 5px solid #191919;
+    border: var(--main-border);
     border-radius: 50%;
     box-shadow: 0 -15px 15px rgba(255,255,255,0.05),
                 inset 0 -10px 10px rgba(255,255,255,0.05),
