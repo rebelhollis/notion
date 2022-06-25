@@ -1,4 +1,14 @@
-*{
+:root {
+    --main-bg-color: #fff;
+}
+
+[data-theme="gray"] {
+    --main-bg-color: #191919;
+}
+
+* {
+    transition: all ease 0.2s;
+    color: #f58f70;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,7 +19,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #191919;
+    background: -var(main-bg-color);
 }
 
 .analog-clock{
@@ -20,6 +30,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background: url("https://dev-to-uploads.s3.amazonaws.com/uploads/articles/245bbqo72lenq5flx0r8.png");
     background-size: cover;
     border: 5px solid #191919;
     border-radius: 50%;
@@ -73,7 +84,7 @@ body{
     position: absolute;
     width: 8px;
     height: 80px;
-    background: #fff;
+    background: #600ef9;
     border-radius: 6px 6px 0 0;
     z-index: 10;
 }
@@ -83,7 +94,7 @@ body{
     position: absolute;
     width: 4px;
     height: 90px;
-    background: #fff;
+    background: #600ef9;
     border-radius: 6px 6px 0 0;
     z-index: 11;
 }
