@@ -9,7 +9,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #ebf5fa;
+    background: #191919;
 }
 
 .analog-clock{
@@ -20,7 +20,7 @@ body{
     align-items: center;
     background: url("https://dev-to-uploads.s3.amazonaws.com/uploads/articles/245bbqo72lenq5flx0r8.png");
     background-size: cover;
-    border: 5px solid #ebf5fa;
+    border: 5px solid #191919;
     border-radius: 50%;
     box-shadow: 0 -15px 15px rgba(255,255,255,0.05),
                 inset 0 -10px 10px rgba(255,255,255,0.05),
@@ -33,7 +33,7 @@ body{
     position: absolute;
     width: 15px;
     height: 15px;
-    background: #008EFF;
+    background: #ff1c8d;
     border-radius: 50%;
     z-index: 10000;
 }
@@ -92,7 +92,7 @@ body{
     position: absolute;
     width: 2px;
     height: 150px;
-    background: #008EFF;
+    background: #ff1c8d;
     border-radius: 6px 6px 0 0;
     z-index: 12;
 }
