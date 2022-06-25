@@ -13,8 +13,10 @@ body{
 }
 
 .analog-clock{
-    width: 350px;
-    height: 350px;
+    width: 500px;
+    min-width: 350px;
+    height: 500px;
+    min-height: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
