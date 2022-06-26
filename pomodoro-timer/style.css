@@ -1,118 +1,102 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Work+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 :root {
-    --main-bg-color: #fff;
-    --main-text-color: #191919;
-    --main-button-color: rgba(0, 0, 0, 0.2);
-    --normal-ring: #fff;
-    --red-ring: #ff0000;
-    --green-ring: #00ff00;
-    --timer-bg: radial-gradient(
-        71.4% 71.4% at 51.7% 28.6%, #f3f3f3 0%, #fff 100%
-    );
-    --font-timer: "Permanent Marker", cursive;
-    --font-stsp: "Work Sans", monospace;
-    --text-shadow: rgba(0, 0, 0, 0.35);
-}
-
-[data-theme="gray"] {
-    --main-bg-color: #191919;
-    --main-text-color: #fff;
-    --main-button-color: rgba(255, 255, 255, 0.2);
-    --normal-ring: #191919;
-    --red-ring: #ff0000;
-    --green-ring: #00ff00;
-    --timer-bg: radial-gradient(
-        71.4% 71.4% at 51.7% 28.6%, #333 0%, #191919 100%
-    );
-    --font-timer: "Permanent Marker", cursive;
-    --font-stsp: "Work Sans", monospace;
-    --text-shadow: rgba(255, 255, 255, 0.35);
-}
-
-*, *::before, *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    transition: all ease 0.2s;
-    color: #f58f70;
+  --bg: #2b2a30;
+  --normal-ring: #17171a;
+  --red-ring: #9d0000;
+  --green-ring: #00aa51;
+  --timer-bg: radial-gradient(
+    71.4% 71.4% at 51.7% 28.6%,
+    #3a393f 0%,
+    #17171a 100%
+  );
+  --font-timer: "Bebas Neue", cursive;
+  --font-stsp: "Montserrat", sans-serif;
+  --font-clr: #ffffff;
 }
 
 body {
-  background: var(--main-bg-color);
-  padding: 0 1rem 1rem 1rem;
+  background: var(--bg);
+  min-height: 100vh;
+  overflow: hidden;
 }
 
-.container{
-    height: 600px;
-    width: 600px;
-    background-color: transparent;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    display: grid;
-    place-items: center;
+.container {
+  height: 600px;
+  width: 600px;
+  background-color: transparent;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  display: grid;
+  place-items: center;
 }
 
-.outer-ring{
-    display: grid;
-    place-items: center;
-    width: 415px;
-    height: 415px;
-    border-radius: 50%;
-    box-shadow: 0 -15px 15px rgba(255,255,255,0.05),
-                inset 0 -10px 10px rgba(255,255,255,0.05),
-                0 4px 15px rgba(0, 0, 0, 0.3),
-                inset 0 4px 10px rgba(0, 0, 0, 0.3);
-    background-color: var(--normal-ring);
+.outerRing {
+  display: grid;
+  place-items: center;
+  width: 415px;
+  height: 415px;
+  border-radius: 50%;
+  box-shadow: -5px 14px 44px #000000, 5px -16px 50px rgba(255, 255, 255, 0.15);
+  background: var(--normal-ring);
 }
 
 .timer {
-    width: 400px;
-    height: 400px;
-    border-radius: 50%;
-    background: var(--main-bg-color);
-    box-shadow: inset 0px 0px 114px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 8rem;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: var(--timer-bg);
+  box-shadow: inset 0px 0px 114px rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 8rem;
 }
 
 #time {
-    width: 300px;
-    text-align: center;
-    margin: 3rem 0 0 0;
+  width: 300px;
+  text-align: center;
+  margin: 3rem 0 0 0;
 }
 
 #time span {
-    display: inline;
-    color: var(--main-text-color);
-    font-family: var(--font-timer);
-    font-size: 5rem;
-    letter-spacing: 0.1em;
-    text-shadow: var(--text-shadow);
+  display: inline;
+  color: var(--font-clr);
+  font-family: var(--font-timer);
+  font-size: 7rem;
+  letter-spacing: 0.1em;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 #stsp {
-    color: var(--main-text-color);
-    cursor: pointer;
-    font-family: 'Work Sans', monospace;
-    font-weight: bold;
-    font-size: 1rem;
-    line-height: 1.25rem;
-    text-align: center;
-    letter-spacing: 0.6rem;
-    margin: 1rem 0;
-    text-shadow: var(--text-shadow);
+  color: var(--font-clr);
+  cursor: pointer;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  text-align: center;
+  letter-spacing: 0.6em;
+  margin: 1rem 0;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 #setting {
-    cursor: pointer;
-    margin-top: 1rem;
-    width: 25px;
-    height: 25px;
-    color: #585858;
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  margin-top: 1rem;
+  width: 25px;
+  height: 25px;
+  color: #585858;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
 }
