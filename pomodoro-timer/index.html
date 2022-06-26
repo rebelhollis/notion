@@ -5,28 +5,20 @@
         <title>Pomodoro Timer</title>
         <link rel="stylesheet" href="style.css">
     </head>
-  <body>
-    <div class="pomodoro-container">
-      <div class="timer-display"></div>
-      <ul class="button-group">
-        <li class="start button">
-          <i class="fa fa-play start" aria-hidden="true"></i>
-        </li>
-        <li class="pause button">
-          <i class="fa fa-pause pause" aria-hidden="true"></i>
-        </li>
-        <li class="stop button">
-          <i class="fa fa-stop stop" aria-hidden="true"></i>
-        </li>
-      </ul>
-      <div class="session-type"></div>
-      <div class="task-section">
-        <h4>Total Sessions</h4>
-        <p class="task-list">Work : <span class="work-sessions"></span></p>
-        <p class="task-list">Break : <span class="break-sessions"></span></p>
-      </div>
-    </div>
-    <script src="js/progressbar.js"></script>
-    <script src="js/script.js"></script>
-  </body>
+    <body>
+        <div class="container">
+            <div class="outerRing">
+                <div class="timer">
+                    <div id="time">
+                        <span id="minutes">00</span>
+                        <span id="colon">:</span>
+                        <span id="seconds">10</span>
+                    </div>
+                    <div id="stsp">start</div>
+                    <span id="setting"><i class="fas fa-cog"></i></span>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
 </html>

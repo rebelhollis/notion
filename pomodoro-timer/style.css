@@ -1,23 +1,41 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Work+Sans&display=swap');
 
 :root {
     --main-bg-color: #fff;
     --main-text-color: #191919;
     --main-button-color: rgba(0, 0, 0, 0.2);
+    --normal-ring: #fff;
+    --red-ring: #ff0000;
+    --green-ring: #00ff00;
+    --timer-bg: radial-gradient(
+        71.4% 71.4% at 51.7% 28.6%, #f3f3f3 0%, #fff 100%
+    );
+    --font-timer: "Permanent Marker", cursive;
+    --font-stsp: "Work Sans", monospace;
+    --text-shadow: rgba(0, 0, 0, 0.35);
 }
 
 [data-theme="gray"] {
     --main-bg-color: #191919;
     --main-text-color: #fff;
     --main-button-color: rgba(255, 255, 255, 0.2);
+    --normal-ring: #191919;
+    --red-ring: #ff0000;
+    --green-ring: #00ff00;
+    --timer-bg: radial-gradient(
+        71.4% 71.4% at 51.7% 28.6%, #333 0%, #191919 100%
+    );
+    --font-timer: "Permanent Marker", cursive;
+    --font-stsp: "Work Sans", monospace;
+    --text-shadow: rgba(255, 255, 255, 0.35);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  transition: all ease 0.2s;
-  color: #f58f70;
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all ease 0.2s;
+    color: #f58f70;
 }
 
 body {
@@ -25,54 +43,76 @@ body {
   padding: 0 1rem 1rem 1rem;
 }
 
-.pomodoro-container {
-  max-width: 500px;
-  margin: 100px auto 0 auto;
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  color: var(--main-text-color);
-  text-align: center;
+.container{
+    height: 600px;
+    width: 600px;
+    background-color: transparent;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    display: grid;
+    place-items: center;
 }
 
-.session-type {
-  font-size: 1.8rem;
-  font-weight: 400;
-  padding-bottom: 1.25rem;
+.outer-ring{
+    display: grid;
+    place-items: center;
+    width: 415px;
+    height: 415px;
+    border-radius: 50%;
+    box-shadow: 0 -15px 15px rgba(255,255,255,0.05),
+                inset 0 -10px 10px rgba(255,255,255,0.05),
+                0 4px 15px rgba(0, 0, 0, 0.3),
+                inset 0 4px 10px rgba(0, 0, 0, 0.3);
+    background-color: var(--normal-ring);
 }
 
-.timer-display {
-  font-size: 3rem;
+.timer {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: var(--main-bg-color);
+    box-shadow: inset 0px 0px 114px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 8rem;
 }
 
-.button-group {
-  list-style: none;
-  padding: 0;
-  margin-top: 1rem;
-  display: flex;
-  justify-content: center;
-  font-size: 1.25rem;
-  margin-top: 0.8rem;
+#time {
+    width: 300px;
+    text-align: center;
+    margin: 3rem 0 0 0;
 }
 
-.button {
-  background: var(--main-button-color);
-  color: var(--main-button-color);
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 100%;
+#time span {
+    display: inline;
+    color: var(--main-text-color);
+    font-family: var(--font-timer);
+    font-size: 7rem;
+    letter-spacing: 0.1em;
+    text-shadow: var(--text-shadow);
+}
+#stsp {
+    color: var(--main-text-color);
+    cursor: pointer;
+    font-family: 'Work Sans', monospace;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    text-align: center;
+    letter-spacing: 0.6rem;
+    margin: 1rem 0;
+    text-shadow: var(--text-shadow);
 }
 
-.button i {
-  margin-top: 0.7rem;
-}
-
-li.stop {
-  margin-left: 0.5rem;
-}
-
-/* Media Queries */
-@media (max-width: 40rem) {
-  .timer-display {
-    font-size: 2rem;
-  }
+#setting {
+    cursor: pointer;
+    margin-top: 1rem;
+    width: 25px;
+    height: 25px;
+    color: #585858;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.35);
 }
