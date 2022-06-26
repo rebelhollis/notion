@@ -16,6 +16,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all ease 0.2s;
+  color: #f58f70;
 }
 
 body {
@@ -23,7 +25,7 @@ body {
   padding: 0 1rem 1rem 1rem;
 }
 
-.pomodoro-timer {
+.pomodoro-container {
   max-width: 500px;
   margin: 100px auto 0 auto;
   font-family: "Roboto", sans-serif;
@@ -54,7 +56,7 @@ body {
 
 .button {
   background: var(--main-button-color);
-  color: var(--main-text-color);
+  color: var(--main-button-color);
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 100%;
