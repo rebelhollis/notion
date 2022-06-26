@@ -1,53 +1,19 @@
-const minElem = document.querySelector("#minutes"), secElem = document.querySelector("#seconds"), setting = document.querySelector("#setting");
+const progressBar = document.querySelector(".outerRing"),
+	minElem = document.querySelector("#minutes"),
+	secElem = document.querySelector("#seconds"),
+	startStop = document.querySelector("#stsp"),
+	setting = document.querySelector("#setting");
 
-let toggleSettings = false;
-
-setting.onclick = function () {
-    if (!toggleSettings){
-        toggleSettings = true;
-        minElem.contentEditable = true;
-        minElem.style.borderBottom = `1px dashed #ffffff50`;
-        secElem.contentEditable = true;
-        secElem.style.borderBottom = `1px dashed #ffffff50`
-    } else {
-        resetValues();
-    }
-}
-
-minElem.onblur = function () {
-    resetValues();
-}
-
-secElem.onblur = function(){
-    resetValues();
-}
-
-const startStop = document.querySelector("#stsp");
-
-let minutes = document.querySelector("#stsp").innerHTML, seconds = document.querySelector("#seconds").innerHTML;
-
-startStop.onclick = function () {
-    if (startStop.innerHTML === "START") {
-        if (!(parseInt(minutes) === 0 & parseInt(seconds) === 0)){
-            startStop.innerHTML = "STOP";
-            startStopProgress();
-        } else {
-            startStop.innerHTML = "STOP";
-            startStopProgress();
-        }
-    }
-}
-
-function startStopProgress() {
-    if (!progress) {
-        progress = setInterval(progressTrack, speed);
-    } else {
-        clearInterval(progress);
-        progress = null;
-        progressStart = 0;
-        progressBar.style.background = `conic-gradient( #191919a 360deg, #191919a 360deg)`;
-    }
-}
+let minutes = document.querySelector("#minutes").innerHTML,
+	seconds = document.querySelector("#seconds").innerHTML,
+	progress = null,
+	progressStart = 0,
+	progressEnd = parseInt(minutes) * 60 + parseInt(seconds),
+	speed = 1000,
+	degTravel = 360 / progressEnd,
+	toggleSettings = false,
+	secRem = 0,
+	minRem = 0;
 
 function progressTrack() {
 	progressStart++;
@@ -73,6 +39,75 @@ function progressTrack() {
 		progressStart = 0;
 	}
 }
+
+function startStopProgress() {
+	if (!progress) {
+		progress = setInterval(progressTrack, speed);
+	} else {
+		clearInterval(progress);
+		progress = null;
+		progressStart = 0;
+		progressBar.style.background = `conic-gradient(
+				#17171a 360deg,
+				#17171a 360deg
+		  )`;
+	}
+}
+
+function resetValues() {
+	if (progress) {
+		clearInterval(progress);
+	}
+	minutes = document.querySelector("#minutes").innerHTML;
+	seconds = document.querySelector("#seconds").innerHTML;
+	toggleSettings = false;
+	minElem.contentEditable = false;
+	minElem.style.borderBottom = `none`;
+	secElem.contentEditable = false;
+	secElem.style.borderBottom = `none`;
+	progress = null;
+	progressStart = 0;
+	progressEnd = parseInt(minutes) * 60 + parseInt(seconds);
+	degTravel = 360 / progressEnd;
+	progressBar.style.background = `conic-gradient(
+				#17171a 360deg,
+				#17171a 360deg
+		  )`;
+}
+
+startStop.onclick = function () {
+	if (startStop.innerHTML === "START") {
+		if (!(parseInt(minutes) === 0 && parseInt(seconds) === 0)) {
+			startStop.innerHTML = "STOP";
+			startStopProgress();
+		} else {
+			alert("Enter the Time Value in your Timer!");
+		}
+	} else {
+		startStop.innerHTML = "START";
+		startStopProgress();
+	}
+};
+
+setting.onclick = function () {
+	if (!toggleSettings) {
+		toggleSettings = true;
+		minElem.contentEditable = true;
+		minElem.style.borderBottom = `1px dashed #ffffff50`;
+		secElem.contentEditable = true;
+		secElem.style.borderBottom = `1px dashed #ffffff50`;
+	} else {
+		resetValues();
+	}
+};
+
+minElem.onblur = function () {
+	resetValues();
+};
+
+secElem.onblur = function () {
+	resetValues();
+};
 
 function light(){
 	document.documentElement.setAttribute('data-theme', 'pure');
