@@ -9,17 +9,28 @@
 }
 
 :root {
-  --bg: #2b2a30;
+  --bg: #ffffff;
   --normal-ring: #17171a;
   --red-ring: #9d0000;
   --green-ring: #00aa51;
   --timer-bg: radial-gradient(
     71.4% 71.4% at 51.7% 28.6%,
-    #3a393f 0%,
-    #17171a 100%
+    #f3f3f3 0%,
+    #fff 100%
   );
   --font-timer: "Bebas Neue", cursive;
   --font-stsp: "Montserrat", sans-serif;
+  --font-clr: #191919;
+}
+
+[data-theme="gray"] {
+  --bg: #191919;
+  --normal-ring: #17171a;
+  --timer-bg: radial-gradient(
+    71.4% 71.4% at 51.7% 28.6%,
+    #3a393f 0%,
+    #17171a 100%
+  );
   --font-clr: #ffffff;
 }
 
